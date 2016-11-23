@@ -38,4 +38,9 @@
     <string name="screen_off_udfps_title">Screen off FOD</string>
     <string name="screen_off_udfps_summary">Keep FOD enabled when the screen is off</string>
     
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">Playback control</string>
+    <string name="volume_button_music_control_summary">When the screen is off, long-pressing volume keys will skip music tracks</string>
+    <string name="gesture_playback_control_delay">delay</string>
+    
 </resources>
