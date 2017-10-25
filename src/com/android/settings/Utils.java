@@ -46,6 +46,7 @@ import android.content.pm.IPackageManager;
 import android.content.pm.IntentFilterVerificationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
 import android.content.pm.UserProperties;
 import android.content.res.Configuration;
@@ -1599,5 +1600,28 @@ public final class Utils extends com.android.settingslib.Utils {
     private static void disableComponent(PackageManager pm, ComponentName componentName) {
         pm.setComponentEnabledSetting(componentName,
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+    }
+
+    /**
+     * Checks if a package is available to handle the given action.
+     */
+    public static boolean canResolveIntent(Context context, Intent intent) {
+        // check whether the target handler exist in system
+        PackageManager pm = context.getPackageManager();
+        List<ResolveInfo> results = pm.queryIntentActivitiesAsUser(intent,
+                PackageManager.MATCH_SYSTEM_ONLY,
+                UserHandle.myUserId());
+        for (ResolveInfo resolveInfo : results) {
+            // check is it installed in system.img, exclude the application
+            // installed by user
+            if ((resolveInfo.activityInfo.applicationInfo.flags &
+                    ApplicationInfo.FLAG_SYSTEM) != 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean canResolveIntent(Context context, String action) {
+        return canResolveIntent(context, new Intent(action));
     }
 }
