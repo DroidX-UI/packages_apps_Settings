@@ -193,6 +193,7 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.droidx.customize.CustomizeDashboard;
+import com.android.settings.livedisplay.LiveDisplaySettings;
 
 public class SettingsGateway {
 
@@ -375,6 +376,7 @@ public class SettingsGateway {
             UserAspectRatioDetails.class.getName(),
             ScreenTimeoutSettings.class.getName(),
             CustomizeDashboard.class.getName(),
+            LiveDisplaySettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {

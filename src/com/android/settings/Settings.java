@@ -483,4 +483,7 @@ public class Settings extends SettingsActivity {
 
     // Customizer Additions.
     public static class CustomizeSettingsActivity extends SettingsActivity { /* empty */ }
+
+    // LiveDisplay
+    public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 }
