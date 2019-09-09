@@ -21,6 +21,12 @@
     android:title="@string/about_settings"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- DroidX logo -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="droidx_logo"
+        android:layout="@layout/droidx_logo"
+        android:selectable="false"/>
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
