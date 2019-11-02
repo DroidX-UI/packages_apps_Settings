@@ -221,4 +221,8 @@
      <string name="unofficial_title">UNOFFICIAL</string>
      <string name="maintainer_summary">%s</string>
      <string name="unknown_maintainer">No Clue Who Made this Build ;)</string>
+
+    <!-- Android debugging as root -->
+    <string name="adb_enable_root">Rooted debugging</string>
+    <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
 </resources>
