@@ -244,5 +244,9 @@
     <!-- Force LTE_CA -->
     <string name="force_lte_ca">Force LTE CA</string>
     <string name="force_lte_ca_summary">Force LTE carrier aggregation to work</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
     
 </resources>
