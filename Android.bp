@@ -68,6 +68,7 @@ android_library {
         "res-product",
         "res-dot",
         "Customize/res",
+        "TouchGestures/res",
     ],
 
     aaptflags: ["--extra-packages com.droidx.customize",
