@@ -84,6 +84,12 @@
         android:fragment="com.android.settings.lineage.health.ChargingControlSettings"
         settings:controller="com.android.settings.lineage.health.ChargingControlPreferenceController" />
 
+    <!-- Battery light -->
+    <SwitchPreferenceCompat
+        android:key="battery_light_enabled"
+        android:title="@string/battery_light_title"
+        settings:controller="com.android.settings.notification.BatteryLightPreferenceController"/>
+
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
         android:title="@string/battery_footer_summary"
