@@ -245,4 +245,8 @@
     <!-- Smart 5G -->
     <string name="smart_5g_title">Smart 5G</string>
     <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
+    
+    <!-- Navigation bar hint -->
+    <string name="show_navbar_gesture_bar_title">Gesture indicator</string>
+    <string name="show_navbar_gesture_bar_summary">Show gesture indicator at the bottom of the screen</string>
 </resources>
