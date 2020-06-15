@@ -141,6 +141,9 @@
     <uses-permission android:name="android.permission.ACCESS_GPU_SERVICE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
+    <!-- LineageHardware -->
+    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
+
     <application
             android:name=".SettingsApplication"
             android:label="@string/settings_label"
