@@ -145,6 +145,9 @@
     <uses-permission android:name="android.permission.RESTART_PHONE_PROCESS" />
     <uses-permission android:name="android.permission.MANAGE_ENHANCED_CONFIRMATION_STATES" />
 
+    <!-- LineageHardware -->
+    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
+
     <application
             android:name=".SettingsApplication"
             android:label="@string/settings_label"
