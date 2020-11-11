@@ -249,4 +249,10 @@
     <!-- Navigation bar hint -->
     <string name="show_navbar_gesture_bar_title">Gesture indicator</string>
     <string name="show_navbar_gesture_bar_summary">Show gesture indicator at the bottom of the screen</string>
+    
+    <!-- Back gesture height -->
+    <string name="back_height_low_label">Full</string>
+    <string name="back_height_high_label">Bottom</string>
+    <string name="back_height_title">Back gesture height</string>
+    <string name="back_height_summary">Screen height valid for back gesture</string>
 </resources>
