@@ -71,6 +71,7 @@ public final class PhysicalKeyboardFragment extends DashboardFragment
 
     private static final String KEYBOARD_OPTIONS_CATEGORY = "keyboard_options_category";
     private static final String KEYBOARD_A11Y_CATEGORY = "keyboard_a11y_category";
+    private static final String KEYBOARD_EXTRAS_CATEGORY = "keyboard_extras_category";
     private static final String ACCESSIBILITY_BOUNCE_KEYS = "accessibility_bounce_keys";
     private static final String ACCESSIBILITY_SLOW_KEYS = "accessibility_slow_keys";
     private static final String ACCESSIBILITY_STICKY_KEYS = "accessibility_sticky_keys";
@@ -105,6 +106,8 @@ public final class PhysicalKeyboardFragment extends DashboardFragment
     @Nullable
     private PreferenceCategory mKeyboardA11yCategory = null;
     @Nullable
+    private PreferenceCategory mKeyboardExtrasCategory;
+    @NonNull
     private TwoStatePreference mAccessibilityBounceKeys = null;
     @Nullable
     private TwoStatePreference mAccessibilitySlowKeys = null;
@@ -144,6 +147,8 @@ public final class PhysicalKeyboardFragment extends DashboardFragment
         mImm = Preconditions.checkNotNull(activity.getSystemService(InputMethodManager.class));
         mKeyboardAssistanceCategory = Preconditions.checkNotNull(
                 findPreference(KEYBOARD_OPTIONS_CATEGORY));
+        mKeyboardExtrasCategory = Preconditions.checkNotNull(
+                (PreferenceCategory) findPreference(KEYBOARD_EXTRAS_CATEGORY));
 
         mKeyboardA11yCategory = Objects.requireNonNull(findPreference(KEYBOARD_A11Y_CATEGORY));
         mAccessibilityBounceKeys = Objects.requireNonNull(
@@ -346,6 +351,8 @@ public final class PhysicalKeyboardFragment extends DashboardFragment
         if (mSupportsFirmwareUpdate) {
             mFeatureProvider.registerKeyboardInformationCategory(preferenceScreen);
         }
+        mKeyboardExtrasCategory.setOrder(99);
+        preferenceScreen.addPreference(mKeyboardExtrasCategory);
 
         if (InputSettings.isAccessibilityBounceKeysFeatureEnabled()
                 || InputSettings.isAccessibilityStickyKeysFeatureEnabled()
