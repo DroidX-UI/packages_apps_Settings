@@ -133,6 +133,7 @@ android_library {
         "kotlinx_coroutines",
         "VendorSupport-preference",
         "glide",
+        "vendor.lineage.fastcharge-V1.0-java",
     ],
 
     plugins: [
