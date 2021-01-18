@@ -120,6 +120,7 @@ android_library {
         "kotlinx_coroutines_android",
         "kotlinx_coroutines",
         "SettingsLibMainSwitchPreference",
+        "vendor.lineage.fastcharge-V1.0-java",
     ],
 
     libs: [
