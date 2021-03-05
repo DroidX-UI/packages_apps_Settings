@@ -79,7 +79,8 @@ public class PhoneRingtonePreferenceControllerTest {
                 .thenReturn(mPreference);
         mController.displayPreference(mPreferenceScreen);
 
-        verify(mPreference).setTitle(mContext.getString(R.string.ringtone1_title));
+        verify(mPreference).setTitle(mContext.getString(R.string.ringtone_title) + " - " +
+            String.format(mContext.getString(R.string.sim_card_number_title), 1)));
 
     @Test
     @DisableFlags(Flags.FLAG_ENABLE_RINGTONE_HAPTICS_CUSTOMIZATION)
