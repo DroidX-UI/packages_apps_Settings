@@ -126,6 +126,7 @@ android_library {
         "androidx.navigation_navigation-ui-ktx",
         "kotlin-stdlib",
         "VendorSupport-preference",
+        "glide",
     ],
 
     plugins: [
@@ -200,5 +201,9 @@ filegroup {
 android_library_import {
     name: "expandable-bottombar",
     aars: ["libs/lib-expandablebottombar-release.aar"],
-    sdk_version: "current",
+}
+
+android_library_import {
+    name: "glide",
+    aars: ["libs/glide-4.9.0.aar"],
 }
