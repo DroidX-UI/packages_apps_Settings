@@ -360,4 +360,8 @@
 
     <!-- Battery light -->
     <string name="battery_light_title">Turn on the light when charging</string>
+
+    <!-- Idle manager -->
+    <string name="idle_manager_title">Idle manager</string>
+    <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 </resources>

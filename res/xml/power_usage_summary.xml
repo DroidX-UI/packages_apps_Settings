@@ -71,6 +71,12 @@
         settings:controller="com.android.settings.deviceinfo.batteryinfo.BatteryInfoPreferenceController"
         settings:keywords="@string/keywords_battery_info" />
 
+    <com.droidx.support.preferences.SystemSettingSwitchPreference
+        android:key="arcane_idle_manager"
+        android:title="@string/idle_manager_title"
+        android:summary="@string/idle_manager_summary"
+        android:defaultValue="false" />
+
     <SwitchPreferenceCompat
         android:key="status_bar_show_battery_percent"
         android:title="@string/battery_percentage"
