@@ -236,5 +236,9 @@
     <string name="team_2">PixelExperience</string>
     <string name="team_3">EvolutionX</string>
     <string name="team_4">Crdroid</string>
+
+    <!-- App search preference -->
+    <string name="search">Search</string>
+    <string name="search_apps">Search apps</string>
     
 </resources>
