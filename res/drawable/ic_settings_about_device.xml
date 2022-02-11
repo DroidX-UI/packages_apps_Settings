@@ -1,25 +1,7 @@
-<!--
-    Copyright (C) 2018 The Android Open Source Project
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
--->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0">
-    <path
-        android:pathData="M7,1L17,1.01C18.1,1.01 19,1.9 19,3V21C19,22.1 18.1,23 17,23H7C5.9,23 5,22.1 5,21V3C5,1.9 5.9,1 7,1ZM7,21H17V20H7V21ZM17,18H7V6H17V18ZM7,3V4H17V3H7ZM11,7H13V9H11V7ZM13,11H11V17H13V11Z"
-        android:fillType="evenOdd"
-        android:fillColor="?android:attr/colorPrimary"/>
-</vector>
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="-8.0dip" android:insetRight="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <vector android:tint="?android:colorControlNormal" android:height="40.0dip" android:width="40.0dip" android:viewportWidth="36.0" android:viewportHeight="36.0">
+        <path android:fillColor="#ff000000" android:pathData="M13.355,25.0183V10.985H22.6439V25.0183H13.355ZM13.3328,9.385C12.9177,9.385 12.5095,9.5269 12.2032,9.8332C11.8969,10.1395 11.755,10.5476 11.755,10.9628V25.8183V26.6183H12.555H22.6661C23.0812,26.6183 23.4894,26.4765 23.7957,26.1701C24.102,25.8638 24.2439,25.4557 24.2439,25.0405V10.9628C24.2439,10.5476 24.102,10.1395 23.7957,9.8332C23.4894,9.5269 23.0812,9.385 22.6661,9.385H13.3328ZM19.7774,22.446H16.2218V24.046H19.7774V22.446Z" android:fillType="evenOdd" />
+    </vector>
+</inset>
