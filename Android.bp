@@ -109,6 +109,7 @@ android_library {
         "androidx.navigation_navigation-ui-ktx",
         "kotlin-stdlib",
         "VendorSupport-preference",
+        "faceunlock_framework",
     ],
 
     libs: [
