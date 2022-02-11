@@ -108,13 +108,13 @@
     <dimen name="actionbar_subsettings_contentInsetStart">72dp</dimen>
 
     <!-- Dashboard image tile size -->
-    <dimen name="dashboard_tile_image_size">36dp</dimen>
+    <dimen name="dashboard_tile_image_size">30dp</dimen>
 
     <!-- Dashboard foreground image size -->
-    <dimen name="dashboard_tile_foreground_image_size">24dp</dimen>
+    <dimen name="dashboard_tile_foreground_image_size">30dp</dimen>
 
     <!-- Dashboard foreground image inset (from background edge to foreground edge) -->
-    <dimen name="dashboard_tile_foreground_image_inset">6dp</dimen>
+    <dimen name="dashboard_tile_foreground_image_inset">30dp</dimen>
 
     <!-- Preference icon foreground image inset (from background edge to foreground edge) -->
     <dimen name="preference_icon_foreground_image_inset">12dp</dimen>
