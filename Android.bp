@@ -53,6 +53,7 @@ android_library {
 
     srcs: ["src/**/*.java", "src/**/*.kt",
            "Customize/src/**/*.java",
+           "src-dot/**/*.java"
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/shared/**/*.kt",
@@ -62,6 +63,7 @@ android_library {
         "res",
         "res-export", // for external usage
         "res-product",
+        "res-dot",
         "Customize/res",
     ],
 
