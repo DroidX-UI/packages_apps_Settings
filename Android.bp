@@ -56,10 +56,12 @@ android_library {
     srcs: ["src/**/*.java", 
 	   "src/**/*.kt",
 	   "Customize/src/**/*.java",
+	   "src-dot/**/*.java"
     ],
 
     resource_dirs: [
         "res",
+        "res-dot",
         "Customize/res",
     ],
     
@@ -157,7 +159,7 @@ filegroup {
 // over all the sources together.
 filegroup {
     name: "Settings_srcs",
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java", "src/**/*.kt", "src-dot/**/*.java"],
 }
 
 filegroup {
