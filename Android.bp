@@ -56,12 +56,14 @@ android_library {
 
     srcs: ["src/**/*.java", "src/**/*.kt",
            "Customize/src/**/*.java",
+           "src-dot/**/*.java"
     ],
 
     resource_dirs: [
         "res",
         "res-export", // for external usage
         "res-product",
+        "res-dot",
         "Customize/res",
     ],
 
@@ -175,7 +177,7 @@ filegroup {
 // separately for different modules.
 filegroup {
     name: "Settings_srcs",
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java", "src/**/*.kt", "src-dot/**/*.java"],
 }
 
 // Deprecated. Do not depend on this, only depend on Settings-core, and its manifest is also
