@@ -55,6 +55,7 @@ android_library {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
+        "Customize/src/**/*.java",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
@@ -64,7 +65,13 @@ android_library {
         "res",
         "res-export", // for external usage
         "res-product",
+        "Customize/res",
     ],
+
+    aaptflags: ["--extra-packages com.droidx.customize",
+                "--extra-packages github.com.st235.lib_expandablebottombar",
+    ],
+    
     static_libs: [
         // External dependencies
         "androidx.navigation_navigation-fragment-ktx",
@@ -111,6 +118,12 @@ android_library {
         "setupdesign-lottie-loading-layout",
         "device_policy_aconfig_flags_lib",
         "keyboard_flags_lib",
+        "expandable-bottombar",
+        "androidx.navigation_navigation-common-ktx",
+        "androidx.navigation_navigation-fragment-ktx",
+        "androidx.navigation_navigation-runtime-ktx",
+        "androidx.navigation_navigation-ui-ktx",
+        "kotlin-stdlib",
     ],
 
     plugins: [
@@ -175,4 +188,10 @@ android_library_import {
 filegroup {
     name: "Settings_proguard_flags",
     srcs: ["proguard.flags"],
+}
+
+android_library_import {
+    name: "expandable-bottombar",
+    aars: ["libs/lib-expandablebottombar-release.aar"],
+    sdk_version: "current",
 }
