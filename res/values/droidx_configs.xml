@@ -17,4 +17,6 @@
     <!-- Whether to show or hide sensitive info (like IMEI and Phone Number) on About phone -->
     <bool name="configShowDeviceSensitiveInfo">false</bool>
 
+     <color name="homepage_droidx_background">#536dfe</color>
+     <color name="user_crd_bg">@android:color/system_neutral1_0</color>
 </resources>

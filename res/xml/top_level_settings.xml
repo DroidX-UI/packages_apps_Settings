@@ -50,6 +50,16 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
+        
+    <Preference
+        android:key="top_level_droidx"
+        android:title="@string/customize_dashboard_title"
+        android:summary="@string/build_tweaks_summary_title"
+        android:icon="@drawable/ic_settings_droidx"
+        android:order="-130"
+        android:fragment="com.droidx.customize.CustomizeDashboard"
+        settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
+
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/ic_apps"
