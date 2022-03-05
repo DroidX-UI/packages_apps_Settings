@@ -117,7 +117,7 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
 
         if (isToolbarEnabled() && !isAnySetupWizard) {
             super.setContentView(
-                    com.android.settingslib.collapsingtoolbar.R.layout.collapsing_toolbar_base_layout);
+                    com.android.settingslib.collapsingtoolbar.R.layout.xd_base_layout);
             mCollapsingToolbarLayout =
                     findViewById(com.android.settingslib.collapsingtoolbar.R.id.collapsing_toolbar);
             mAppBarLayout = findViewById(R.id.app_bar);
