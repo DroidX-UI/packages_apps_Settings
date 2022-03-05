@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- xdUI Base Layout -->
+    <color name="homepage_blaze_background">#536dfe</color>
+    <color name="xd_background1">@android:color/system_neutral1_50</color>
+</resources>
