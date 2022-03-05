@@ -72,7 +72,7 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
     private static final int EXPRESSIVE_LAYOUT_ID =
             com.android.settingslib.collapsingtoolbar.R.layout.settingslib_expressive_collapsing_toolbar_base_layout;
     private static final int COLLAPSING_LAYOUT_ID =
-            com.android.settingslib.collapsingtoolbar.R.layout.collapsing_toolbar_base_layout;
+            com.android.settingslib.collapsingtoolbar.R.layout.xd_base_layout;
 
 
     protected CategoryMixin mCategoryMixin;

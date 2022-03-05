@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- xd. Preference Card -->
+    <dimen name="xd_pref_card_radius">28dp</dimen>
+    <dimen name="xd_pref_card_radius-outer">5dp</dimen>
+    <dimen name="xd_pref_card_horizontal_padding">16dp</dimen>
+    <dimen name="xd_pref_card_horizontal_padding-negative">-16dp</dimen>
+
+    <!-- xd. Toolbar --> 
+    <dimen name="xd_toolbar_height">145dp</dimen>
+    <dimen name="xd_toolbar_expanded_title_margin_start">21dp</dimen>
+    <dimen name="xd_toolbar_expanded_title_margin_end">65dp</dimen>
+</resources>
