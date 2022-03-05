@@ -29,4 +29,8 @@
 	<!-- Whether to show min/max refresh rate in display settings -->
     <bool name="config_show_refresh_rate_controls">false</bool>
     <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
+
+    <!-- xdUI Base Layout -->
+    <color name="homepage_blaze_background">#536dfe</color>
+    <color name="xd_background1">@android:color/system_neutral1_50</color>
 </resources>
