@@ -214,6 +214,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.droidx.customize.CustomizeDashboard;
 import com.android.settings.livedisplay.LiveDisplaySettings;
+import ink.kscope.settings.wifi.tether.WifiTetherClientManager;
 
 public class SettingsGateway {
 
@@ -417,6 +418,7 @@ public class SettingsGateway {
             ContactsStorageSettings.class.getName(),
             CustomizeDashboard.class.getName(),
             LiveDisplaySettings.class.getName(),
+            WifiTetherClientManager.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
