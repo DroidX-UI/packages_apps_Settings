@@ -476,4 +476,8 @@
     <string name="misc_security_privacy_title">Additional security &amp; privacy settings</string>
     <string name="misc_security_header">Security</string>
     <string name="misc_privacy_header">Privacy</string>
+
+    <!-- Ignore window secure -->
+    <string name="ignore_window_secure_title">Ignore window secure flags</string>
+    <string name="ignore_window_secure_summary">Remove the screenshots and screenrecords limits for all applications. Can be convenient in some cases but may lead to privacy leaks. Need to restart applications for the change to take effect.</string>
 </resources>

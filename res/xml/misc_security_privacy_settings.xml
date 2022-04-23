@@ -17,6 +17,13 @@
     <PreferenceCategory
         android:key="misc_privacy_category"
         android:title="@string/misc_privacy_header">
+
+        <com.droidx.support.preferences.GlobalSettingSwitchPreference
+            android:key="window_ignore_secure"
+            android:title="@string/ignore_window_secure_title"
+            android:summary="@string/ignore_window_secure_summary"
+            android:defaultValue="false"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>
