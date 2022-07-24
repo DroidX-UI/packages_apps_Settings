@@ -743,7 +743,8 @@
 
         <SwitchPreferenceCompat
             android:key="enable_freeform_support"
-            android:title="@string/enable_freeform_support" />
+            android:title="@string/enable_freeform_support"
+            android:defaultValue="true" />
 
         <SwitchPreferenceCompat
             android:key="force_desktop_mode_on_external_displays"
