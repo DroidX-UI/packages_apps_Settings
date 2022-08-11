@@ -79,6 +79,7 @@ android_library {
         "androidx.cardview_cardview",
         "androidx.fragment_fragment",
         "androidx.fragment_fragment-ktx",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
         "androidx.preference_preference",
         "androidx.preference_preference-ktx",
         "androidx.recyclerview_recyclerview",
@@ -117,6 +118,7 @@ android_library {
         "kotlin-stdlib",
         "kotlinx_coroutines_android",
         "kotlinx_coroutines",
+        "SettingsLibMainSwitchPreference",
     ],
 
     libs: [
