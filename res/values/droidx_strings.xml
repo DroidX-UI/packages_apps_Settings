@@ -457,4 +457,8 @@
 
     <!-- Battery light -->
     <string name="battery_light_title">Turn on the light when charging</string>
+
+    <!-- Game space -->
+    <string name="game_space_title">Game space</string>
+    <string name="game_space_summary">Enhance your gaming experience</string>
 </resources>
