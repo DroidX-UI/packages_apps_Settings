@@ -453,4 +453,9 @@
     <!-- Minimum auto brightness --> 
     <string name="user_min_auto_brightness_title">Minimal auto brightness</string>
     <string name="user_min_auto_brightness_summary">Caps auto brightness minimum value</string>
+
+    <!-- Per-app volume control -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 </resources>
