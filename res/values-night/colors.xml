@@ -79,5 +79,9 @@
 
     <!-- Pointer fill color setting outline color-->
     <color name="pointer_fill_outline_color">#FFFFFF</color>
+
+    <!-- Settings Header -->
+    <color name="op_control_text_color_secondary">#89ffffff</color>
+    <color name="op_control_text_color_primary">#ffffffff</color>
 </resources>
 
