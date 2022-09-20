@@ -219,4 +219,10 @@
 
     <!-- Switch bar disabled state color-->
     <color name="switch_bar_state_disabled_color">#1F1F1F1F</color>
+    
+    <!-- Settings Header -->
+    <color name="op_control_text_color_secondary">@color/op_control_text_color_secondary_light</color>
+    <color name="op_control_text_color_secondary_light">#66000000</color>
+    <color name="op_control_text_color_primary">@color/op_control_text_color_primary_light</color>
+    <color name="op_control_text_color_primary_light">#d8000000</color>
 </resources>
