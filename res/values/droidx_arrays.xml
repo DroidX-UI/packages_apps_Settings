@@ -99,7 +99,6 @@
         <item>@string/hardware_keys_action_voice_search</item>
         <item>@string/hardware_keys_action_launch_camera</item>
         <item>@string/hardware_keys_action_sleep</item>
-        <item>@string/hardware_keys_action_split_screen</item>
         <item>@*android:string/global_action_screenshot</item>
     </string-array>
 
@@ -112,6 +111,5 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
-        <item>8</item>
     </string-array>
 </resources>
