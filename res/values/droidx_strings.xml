@@ -227,6 +227,6 @@
     <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
 
     <!-- Hardware info -->
-    <string name="platform_revision">Platform</string>
+    <string name="soc_model">SoC Model</string>
     <string name="total_ram">Total RAM</string>
 </resources>
