@@ -35,7 +35,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eris (2.2)"
+                    android:text="Orion (Alpha)"
                     android:textSize="22sp"
                     style="@style/dotTextPrimaryMedium"/>
             </LinearLayout>
