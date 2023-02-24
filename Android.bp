@@ -107,6 +107,7 @@ android_library {
         "androidx.navigation_navigation-runtime-ktx",
         "androidx.navigation_navigation-ui-ktx",
         "kotlin-stdlib",
+        "VendorSupport-preference",
     ],
 
     libs: [
