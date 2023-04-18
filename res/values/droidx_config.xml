@@ -13,18 +13,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-     <color name="homepage_droidx_background">#536dfe</color>
-     <color name="user_crd_bg">@android:color/system_neutral1_0</color>
+    <color name="homepage_droidx_background">#536dfe</color>
+    <color name="user_crd_bg">@android:color/system_neutral1_0</color>
 
-     <!-- Indicates whether device has a front facing fingerprint sensor (not udfps). -->
-     <bool name="config_is_front_facing_fps" translatable="false">false</bool>
+    <!-- Indicates whether device has a front facing fingerprint sensor (not udfps). -->
+    <bool name="config_is_front_facing_fps" translatable="false">false</bool>
 
-     <!-- Whether to show peak refresh rate in display settings -->
-     <bool name="config_show_peak_refresh_rate_switch">false</bool>
+    <!-- Indicates whether device has a side mounted fingerprint sensor,
+         but a dedicated one, i.e. not embedded in the power button. -->
+    <bool name="config_is_side_fps" translatable="false">false</bool>
 
-     <!-- Whether to show min refresh rate in display settings -->
-     <bool name="config_show_min_refresh_rate_switch">false</bool>
+    <!-- Whether to show peak refresh rate in display settings -->
+    <bool name="config_show_peak_refresh_rate_switch">false</bool>
 
-     <!-- Max network scan search time in seconds -->
-     <integer name="config_network_scan_helper_max_search_time_sec">300</integer>
+    <!-- Whether to show min refresh rate in display settings -->
+    <bool name="config_show_min_refresh_rate_switch">false</bool>
+
+    <!-- Max network scan search time in seconds -->
+    <integer name="config_network_scan_helper_max_search_time_sec">300</integer>
 </resources>
