@@ -94,6 +94,12 @@
         settings:controller="com.android.settings.gestures.VolumeButtonMusicControlPreferenceController" />
         
     <Preference
+        android:key="power_button_torch_summary"
+        android:title="@string/power_button_torch_title"
+        android:fragment="com.android.settings.gestures.PowerButtonTorchSettings"
+        settings:controller="com.android.settings.gestures.PowerButtonTorchGesturePreferenceController" />
+        
+    <Preference
         android:key="three_finger_gesture_summary"
         android:title="@string/three_finger_gesture"
         android:fragment="com.android.settings.gestures.SwipeToScreenshotGestureSettings"
