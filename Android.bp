@@ -182,5 +182,5 @@ android_library_import {
 
 android_library_import {
     name: "glide",
-    aars: ["libs/glide-4.14.2.aar"],
+    aars: ["libs/glide-4.15.1.aar"],
 }
