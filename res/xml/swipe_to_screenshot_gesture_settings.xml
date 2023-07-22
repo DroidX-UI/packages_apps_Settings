@@ -24,10 +24,6 @@
     <com.android.settings.widget.VideoPreference
         android:key="swipe_to_screenshot_video"
         app:animation="@raw/swipe_to_screenshot"
-
-    <com.android.settingslib.widget.IllustrationPreference
-        android:key="swipe_to_screenshot_video" 
-        app:lottie_rawRes="@raw/lottie_swipe_to_screenshot"
         app:preview="@drawable/swipe_to_screenshot" />
 
     <SwitchPreference
