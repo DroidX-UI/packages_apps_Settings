@@ -18,16 +18,13 @@
     android:background="?android:attr/colorPrimary"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:selectable="false">
+    android:gravity="center">
 
         <ImageView
             android:adjustViewBounds="true"
+            android:layout_margin="17dp"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:scaleType="centerInside"
-            android:layout_marginHorizontal="6dp"
             android:src="@drawable/ic_droidx_logo"/>
 
 </LinearLayout>
