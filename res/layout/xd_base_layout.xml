@@ -80,7 +80,6 @@
             android:layout_marginStart="@dimen/xd_pref_card_horizontal_padding"
             android:layout_marginEnd="@dimen/xd_pref_card_horizontal_padding"
             app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="@dimen/xd_pref_card_radius"
             app:cardElevation="0dp">
 
           <FrameLayout

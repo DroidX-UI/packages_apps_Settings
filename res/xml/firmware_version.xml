@@ -21,11 +21,12 @@
     android:title="@string/about_settings"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- DroidX logo -->
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="droidx_logo"
-        android:layout="@layout/droidx_logo"
-        android:selectable="false"/>
+    <!-- Droidx updater -->
+    <Preference
+        android:key="droidx_updater"
+        android:title="Up to date"
+        android:summary="LimeDust"
+        settings:enableCopying="true"/>
 
     <!-- Android version -->
     <Preference
@@ -35,6 +36,14 @@
         settings:enableCopying="true"
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
+
+    <!-- Device Information -->
+    <Preference
+        android:key="device_info"
+        android:title="Device Info"
+        settings:enableCopying="true"
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
 
     <!-- DroidX Maintainer  -->
     <Preference

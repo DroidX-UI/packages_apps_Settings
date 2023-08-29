@@ -20,6 +20,7 @@ import android.content.Context;
 import android.os.Build;
 
 import com.android.settings.core.BasePreferenceController;
+import com.android.settings.deviceinfo.DeviceNamePreferenceController;
 
 public class FirmwareVersionPreferenceController extends BasePreferenceController {
 
@@ -34,6 +35,8 @@ public class FirmwareVersionPreferenceController extends BasePreferenceControlle
 
     @Override
     public CharSequence getSummary() {
-        return Build.VERSION.RELEASE_OR_PREVIEW_DISPLAY;
+        final DeviceNamePreferenceController deviceNamePreferenceController =
+                new DeviceNamePreferenceController(mContext, "unused_key");
+        return deviceNamePreferenceController.getSummary();
     }
 }
