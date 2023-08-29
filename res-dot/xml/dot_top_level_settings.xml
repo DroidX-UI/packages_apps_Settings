@@ -27,8 +27,8 @@
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_settings_about_device"
         settings:layout="@layout/dot_dashboard_preference_phone"
-        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
-        settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
+        android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
         
     <Preference
@@ -77,14 +77,23 @@
 
     <Preference
         android:key="top_level_display"
-        android:order="-109"
+        android:order="-110"
         android:summary="@string/display_dashboard_summary"
         android:title="@string/display_settings"
         android:icon="@drawable/ic_settings_display_white"
         android:fragment="com.android.settings.DisplaySettings"
         settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"
         settings:layout="@layout/dot_dashboard_preference_top"/>
-    
+
+    <com.android.settings.widget.RestrictedHomepagePreference
+        android:icon="@drawable/ic_settings_wallpaper_white"
+        android:key="top_level_wallpaper"
+        android:order="-109"
+        android:title="@string/wallpaper_settings_title"
+        android:summary="@string/wallpaper_dashboard_summary"
+        settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"
+        settings:layout="@layout/dot_dashboard_preference_middle"/>
+
     <Preference
         android:key="top_level_sound"
         android:order="-108"

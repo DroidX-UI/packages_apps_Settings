@@ -17,11 +17,15 @@
 package com.android.settings.deviceinfo.firmwareversion;
 
 import android.app.settings.SettingsEnums;
+import android.os.Bundle;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
 @SearchIndexable
 public class FirmwareVersionSettings extends DashboardFragment {
@@ -29,6 +33,27 @@ public class FirmwareVersionSettings extends DashboardFragment {
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.firmware_version;
+    }
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        final PreferenceScreen screen = getPreferenceScreen();
+        Preference pref = screen.getPreference(0);
+        pref.setLayoutResource(R.layout.codenameLayout);
+        pref = screen.getPreference(1);
+        pref.setLayoutResource(R.layout.androidDxuiVlayout);
+        pref = screen.getPreference(2);
+        pref.setLayoutResource(R.layout.deviceinfoLayout);
+        for (int i = 3; i < screen.getPreferenceCount(); i++) {
+            pref = screen.getPreference(i);
+            boolean isValid = pref.isEnabled() && pref.isVisible() && pref.getTitle() != null;
+            if (isValid && pref.getLayoutResource() != R.layout.codenameLayout &&
+                pref.getLayoutResource() != R.layout.androidDxuiVlayout) {
+                if(i == 3){ pref.setLayoutResource(R.layout.firmwareremainlayoutTop); }
+                else { pref.setLayoutResource(R.layout.firmwareremainlayout); }
+            }
+        }
     }
 
     @Override
