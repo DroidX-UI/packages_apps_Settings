@@ -41,8 +41,6 @@
           android:layout_height="@dimen/xd_toolbar_height"
           app:collapsedTitleTextAppearance="@style/xd_toolbar.Collapsed"
           app:contentScrim="@android:color/transparent"
-          app:expandedTitleMarginEnd="@dimen/xd_toolbar_expanded_title_margin_end"
-          app:expandedTitleMarginStart="@dimen/xd_toolbar_expanded_title_margin_start"
           app:expandedTitleTextAppearance="@style/xd_toolbar.Expanded"
           app:extraMultilineHeightEnabled="true"
           app:forceApplySystemWindowInsetTop="true"
@@ -52,6 +50,8 @@
           app:scrimVisibleHeightTrigger="@dimen/settingslib_scrim_visible_height_trigger"
           app:statusBarScrim="@null"
           app:titleCollapseMode="fade"
+          app:expandedTitleGravity="center"
+          app:expandedTitleMarginTop="60dp"
           app:toolbarId="@id/action_bar">
             
             <Toolbar
