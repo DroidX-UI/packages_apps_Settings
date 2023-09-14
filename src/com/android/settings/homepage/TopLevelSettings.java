@@ -210,7 +210,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         super.onCreatePreferences(savedInstanceState, rootKey);
         final PreferenceScreen screen = getPreferenceScreen();
         
-        for (int i = 0; i < screen.getPreferenceCount(); i++) {
+        for (int i = 1; i < screen.getPreferenceCount(); i++) {
             Preference pref = screen.getPreference(i);
             boolean isValid = pref.isEnabled() && pref.isVisible() && pref.getTitle() != null;
             if (isValid && pref.getLayoutResource() != R.layout.dot_dashboard_preference_top && 
