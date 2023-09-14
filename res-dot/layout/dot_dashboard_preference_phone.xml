@@ -15,92 +15,75 @@
      limitations under the License.
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
-    style="@style/dotDashboardPreferencePhone"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15.6dp"
+    android:layout_marginEnd="15.6dp"
+    android:foregroundGravity="center_horizontal"
+    android:background="@drawable/no_ripple">
+    
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:gravity="center_vertical"
-        android:clipToPadding="false"
-        android:baselineAligned="false">
+        android:layout_height="147dp"
+        android:clipToOutline="true"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/aboutradius"
+        android:src="@drawable/bannerlatest" />
+    
+    <LinearLayout
+        android:weightSum="2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:minWidth="64dp"
-            android:orientation="vertical" >
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@android:id/icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:tint="?android:attr/textColorPrimaryInverse" />    
-            
+            <TextView
+                 android:id="@android:id/title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="marquee"
+                 android:singleLine="true"
+                 android:textColor="#FFFFFF"
+                 android:textSize="13sp"/>
+
+            <TextView
+                 android:id="@android:id/summary"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@android:id/title"
+                 android:layout_alignStart="@android:id/title"
+                 android:layout_marginTop="4dp"
+                 android:singleLine="true"
+                 android:textColor="#FFFFFF"
+                 android:textSize="18sp"/>
+                 
         </LinearLayout>
-        
-     <RelativeLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="1dp"
-          android:layout_weight="1"
-          android:paddingTop="16dp"
-          android:paddingBottom="16dp">
 
-          <TextView
-               android:id="@android:id/title"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:ellipsize="marquee"
-               android:singleLine="true"
-               style="@style/dotTextPrimaryMedium"
-               android:textColor="?android:attr/textColorPrimaryInverse" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content">
 
-          <TextView
-               android:id="@android:id/summary"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@android:id/title"
-               android:layout_alignStart="@android:id/title"
-               android:layout_marginTop="4dp"
-               android:singleLine="true"
-               style="@style/dotTextSecondary"
-               android:textColor="?android:attr/textColorSecondaryInverse" />
-
-     </RelativeLayout>
-
-     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:minWidth="64dp"
-        android:orientation="vertical" >
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            app:cardBackgroundColor="@color/dot_background3"
-            app:cardElevation="0dp"
-            app:cardCornerRadius="99dp">
-        
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/dot_chevron_right"
-                    android:tint="?android:attr/textColorPrimaryInverse" />    
-        
-        </androidx.cardview.widget.CardView>
-    
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieanime"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                app:lottie_rawRes="@raw/animation_lmanph44"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true" />
+        </LinearLayout>
     </LinearLayout>
-
-    </LinearLayout>
-
-
-</FrameLayout>
+</FrameLayout>  
