@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.SystemClock;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.TextUtils;
@@ -28,6 +29,7 @@ import android.util.Log;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
+import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.RestrictedLockUtils;
@@ -38,6 +40,7 @@ public class FirmwareVersionDetailPreferenceController extends BasePreferenceCon
     private static final String TAG = "firmwareDialogCtrl";
     private static final int DELAY_TIMER_MILLIS = 500;
     private static final int ACTIVITY_TRIGGER_COUNT = 3;
+    private static final String DX_VERSION = "ro.droidx.build.version";
 
     private final UserManager mUserManager;
     private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];
@@ -73,7 +76,9 @@ public class FirmwareVersionDetailPreferenceController extends BasePreferenceCon
 
     @Override
     public CharSequence getSummary() {
-        return Build.VERSION.RELEASE_OR_PREVIEW_DISPLAY;
+        String dxversion = SystemProperties.get(DX_VERSION,
+                this.mContext.getString(R.string.device_info_default));
+        return dxversion;
     }
 
     @Override
