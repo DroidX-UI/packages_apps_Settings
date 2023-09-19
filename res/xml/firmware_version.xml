@@ -25,8 +25,9 @@
     <Preference
         android:key="droidx_updater"
         android:title="Up to date"
-        android:summary="LimeDust"
-        settings:enableCopying="true"/>
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.DroidXCodeNamePreferenceController"/>
 
     <!-- Android version -->
     <Preference
