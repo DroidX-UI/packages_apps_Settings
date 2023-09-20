@@ -33,10 +33,6 @@
     <string name="fingerprint_enroll_find_sensor_message_front">Locate the fingerprint sensor on the front of your phone.</string>
     <string name="fingerprint_enroll_find_sensor_message_rear">Locate the fingerprint sensor on the back of your phone.</string>
     <string name="fingerprint_enroll_find_sensor_message_side">Locate the fingerprint sensor on the side of your phone.</string>
-    	
-    <!-- Screen off FOD -->
-    <string name="screen_off_udfps_title">Screen off FOD</string>
-    <string name="screen_off_udfps_summary">Keep FOD enabled when the screen is off</string>
     
     <!-- Volume button music control -->
     <string name="volume_button_music_control_title">Playback control</string>
