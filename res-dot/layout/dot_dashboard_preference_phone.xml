@@ -79,9 +79,9 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottieanime"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="130dp"
-                app:lottie_rawRes="@raw/animation_lmanph44"
+                app:lottie_rawRes="@raw/dxblinklottie"
                 app:lottie_loop="true"
                 app:lottie_autoPlay="true" />
         </LinearLayout>
