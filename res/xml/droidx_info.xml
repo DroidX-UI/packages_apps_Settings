@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2023 - DroidX-UI
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="DroidX-UI">
+        <!-- Droidx About logo -->
+        <com.android.settingslib.widget.LayoutPreference
+                android:key="droidx_about"
+		android:layout="@layout/droidx_about"
+                android:selectable="false"/>
+	<Preference
+               android:summary="@string/droidx_info_summary" />
+	<Preference
+               android:title="@string/droidx_web"
+               android:summary="@string/droidx_web_summary" 
+               android:icon="@drawable/ic_devs_info" >
+         <intent android:action="android.intent.action.VIEW"
+                android:data="https://droidx-ui.github.io/" />
+        </Preference>
+        <Preference
+               android:title="@string/droidx_telegram"
+               android:summary="@string/droidx_telegram_summary" 
+	       android:icon="@drawable/ic_devs_info">
+        </Preference>
+    <PreferenceCategory
+            android:key="droidx_credits"
+            android:title="@string/credits_header">
+         <Preference			
+             android:key="droidx_credits"
+             android:title="@string/credits_to_these_teams"
+             android:summary="@string/credits_summary"
+             android:fragment="com.android.settings.droidx.DroidXCreditsInfo"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+            android:key="droidx_dev"
+            android:title="@string/devs_header" >
+        <Preference
+            android:title="@string/dev_1"
+            android:summary="@string/dev1_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_3"
+            android:summary="@string/dev3_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_2"
+            android:summary="@string/dev2_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_4"
+            android:summary="@string/dev4_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_5"
+            android:summary="@string/dev5_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_6"
+            android:summary="@string/dev6_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+		    <Preference
+            android:title="@string/dev_7"
+            android:summary="@string/dev7_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_8"
+            android:summary="@string/dev8_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_9"
+            android:summary="@string/dev9_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_10"
+            android:summary="@string/dev10_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+    </PreferenceCategory>
+	<Preference
+            android:title="@string/dev_11"
+            android:summary="@string/dev11_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_12"
+            android:summary="@string/dev12_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+	    android:title="@string/devices">
+         <Preference
+             android:key="xtended_devices"
+	     android:title="@string/devices_title"
+             android:summary="@string/devices_summary"
+             android:fragment="com.android.settings.droidx.DroidXDevices"/>
+    </PreferenceCategory>
+</PreferenceScreen>
