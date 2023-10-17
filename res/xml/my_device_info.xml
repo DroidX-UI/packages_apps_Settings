@@ -28,6 +28,14 @@
         android:selectable="false"
         settings:isPreferenceVisible="false"/>
 
+	<!-- About Devs -->
+    <Preference
+         android:key="dev_info"
+         android:order="-1"
+         android:title="@string/droidx_about_info"
+         android:summary="@string/droidx_about_info_summary_title"
+         android:fragment="com.android.settings.droidx.DroidXDevsInfo" />
+		 
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
