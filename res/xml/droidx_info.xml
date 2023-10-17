@@ -95,7 +95,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:summary="@string/dev10_description"
             android:icon="@drawable/ic_devs_pc" >
         </Preference>
-    </PreferenceCategory>
 	<Preference
             android:title="@string/dev_11"
             android:summary="@string/dev11_description"
