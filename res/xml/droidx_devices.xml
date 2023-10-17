@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2023 Droidx-UI
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="DroidX Officially Supported Devices">
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="droidx_about"
+        android:layout="@layout/droidx_about"
+        android:selectable="false"/>
+
+    <PreferenceCategory
+            android:key="droidx_device_maintainers"
+            android:title="@string/devices_header" >
+        <Preference
+            android:title="@string/device_1"
+            android:summary="@string/device1_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+	    <Preference
+            android:title="@string/device_2"
+            android:summary="@string/device2_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+	    <Preference
+            android:title="@string/device_3"
+            android:summary="@string/device3_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+	    <Preference
+            android:title="@string/device_4"
+            android:summary="@string/device4_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+  	    <Preference
+            android:title="@string/device_5"
+            android:summary="@string/device5_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+        <Preference
+            android:title="@string/device_6"
+            android:summary="@string/device6_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+	    <Preference
+            android:title="@string/device_7"
+            android:summary="@string/device7_description"
+	    android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_8"
+            android:summary="@string/device8_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_9"
+            android:summary="@string/device9_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_10"
+            android:summary="@string/device10_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	    <Preference
+            android:title="@string/device_11"
+            android:summary="@string/device11_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+	    <Preference
+            android:title="@string/device_12"
+            android:summary="@string/device12_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+	    <Preference
+            android:title="@string/device_13"
+            android:summary="@string/device13_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+	    <Preference
+            android:title="@string/device_14"
+            android:summary="@string/device14_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+  	    <Preference
+            android:title="@string/device_15"
+            android:summary="@string/device15_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+        <Preference
+            android:title="@string/device_16"
+            android:summary="@string/device16_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+	    <Preference
+            android:title="@string/device_17"
+            android:summary="@string/device17_description"
+	    android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_18"
+            android:summary="@string/device18_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_19"
+            android:summary="@string/device19_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_20"
+            android:summary="@string/device10_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	    <Preference
+            android:title="@string/device_21"
+            android:summary="@string/device21_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+	    <Preference
+            android:title="@string/device_22"
+            android:summary="@string/device22_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+	    <Preference
+            android:title="@string/device_23"
+            android:summary="@string/device23_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+	    <Preference
+            android:title="@string/device_24"
+            android:summary="@string/device24_description"
+            android:icon="@drawable/ic_devs_phone">
+        </Preference>
+  	    <Preference
+            android:title="@string/device_25"
+            android:summary="@string/device5_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+        <Preference
+            android:title="@string/device_26"
+            android:summary="@string/device26_description"
+            android:icon="@drawable/ic_devs_phone" >
+        </Preference>
+	    <Preference
+            android:title="@string/device_27"
+            android:summary="@string/device27_description"
+	    android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_28"
+            android:summary="@string/device28_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+        <Preference
+            android:title="@string/device_29"
+            android:summary="@string/device29_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	   <Preference
+            android:title="@string/device_30"
+            android:summary="@string/device30_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	   <Preference
+            android:title="@string/device_31"
+            android:summary="@string/device31_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	   <Preference
+            android:title="@string/device_32"
+            android:summary="@string/device32_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	   <Preference
+            android:title="@string/device_33"
+            android:summary="@string/device33_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	   <Preference
+            android:title="@string/device_34"
+            android:summary="@string/device34_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	   <Preference
+            android:title="@string/device_35"
+            android:summary="@string/device35_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+	   <Preference
+            android:title="@string/device_36"
+            android:summary="@string/device36_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
