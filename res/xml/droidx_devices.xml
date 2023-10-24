@@ -167,6 +167,11 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:title="@string/device_29"
             android:summary="@string/device29_description"
             android:icon="@drawable/ic_devs_phone" >
+         </Preference>
+        <Preference
+            android:title="@string/device_30"
+            android:summary="@string/device30_description"
+            android:icon="@drawable/ic_devs_phone" >
        </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
