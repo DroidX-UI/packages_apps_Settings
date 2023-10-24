@@ -476,6 +476,8 @@
     <string name="device28_description">Unknown</string>
     <string name="device_29">Moto G52</string>
     <string name="device29_description">//Dark-Star//</string>
+    <string name="device_30">Redmi Note 8 Pro</string>
+    <string name="device30_description">DexterNoob</string>
     <string name="credits_to_these_teams">Credits Section</string>
     <string name="hail_to_teams"> Huge Thanks to These Teams</string>
     <string name="team_1">LineageOS | CyanogenMOD</string>
