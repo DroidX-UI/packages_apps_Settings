@@ -15,6 +15,15 @@
 
     <!-- Battery light -->
     <string name="battery_light_title">Turn on the light when charging</string>
+
+    <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
+    <string name="selinux_status">SELinux status</string>
+
+    <!-- These statuses are displayed when a device was built with SE Android supoprt.
+    These are displayed by the settings app in the about section. -->
+    <string name="selinux_status_disabled">Disabled</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
     
     <!-- DroidX Maintainer -->
     <string name="droidx_maintainer">Device Maintainer</string>
