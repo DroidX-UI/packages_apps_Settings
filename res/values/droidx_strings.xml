@@ -377,7 +377,7 @@
     <string name="volume_separate_notification_title">Separated Ring and Notification</string>
     <string name="volume_separate_notification_summary">Allow controlling each stream individually</string>
 
-	<!-- Dev Info -->
+	<!-- DroidX About Info -->
     <string name="droidx_about_info">About DroidX-UI</string>
     <string name="droidx_about_info_summary_title">Know Us!</string>
     <string name="droidx_info_summary">DroidX-UI is a Custom ROM based on AOSP. We are trying to make it simple in terms of UI, we have our own ui and customiziations! we hope you enjoy your stay with DroidX.</string>
@@ -393,6 +393,8 @@
     <string name="devices">Devices</string>
     <string name="devices_title">Official Devices</string>
     <string name="devices_summary">Devices We Support Currently</string>
+	
+	<!-- Dev Info -->
     <string name="dev_1">Ashwani</string>
     <string name="dev1_description">The Founder Of The Project</string>
     <string name="dev_2">P4042</string>
@@ -419,6 +421,8 @@
     <string name="dev12_description">Web Dev</string>
 	<string name="dev_13">Lazy</string>
     <string name="dev13_description">Web Dev</string>
+	
+	<!-- Devices Info -->
     <string name="devices_header">Officially Supported Devices</string>
     <string name="device_1">Realme C3/Narzo 10A</string>
     <string name="device1_description">Koushik Dey</string>
@@ -467,7 +471,7 @@
     <string name="device_23">Mi 11t pro</string>
     <string name="device23_description">ThatMalayaliDeb</string>
     <string name="device_24">Redmi Note 11</string>
-    <string name="device24_description">Arijit</string>
+    <string name="device24_description">Arijit, Sayan</string>
     <string name="device_25">Redmi Note 7/7s</string>
     <string name="device25_description">AiCoptan99</string>
     <string name="device_26">Poco X3 Pro</string>
@@ -484,6 +488,16 @@
     <string name="device31_description">PRIYANSHU</string>
     <string name="device_32">Redmi Note 6 Pro</string>
     <string name="device32_description">Sundram</string>
+	<string name="device_33">Redmi Note 8 Pro</string>
+    <string name="device33_description">Noobbeast</string>
+	<string name="device_34">Redmi 12 5G</string>
+    <string name="device34_description">Raizel</string>
+	<string name="device_35">Realme 5 / 5s / 5i</string>
+    <string name="device35_description">shygosh</string>
+	<string name="device_36">Asus Zenfone Max M2</string>
+    <string name="device36_description">Assunzain</string>
+	
+	<!-- Credits To Other Roms/Teams -->
     <string name="credits_to_these_teams">Credits Section</string>
     <string name="hail_to_teams"> Huge Thanks to These Teams</string>
     <string name="team_1">LineageOS | CyanogenMOD</string>
