@@ -105,11 +105,16 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:summary="@string/dev12_description"
             android:icon="@drawable/ic_devs_pc" >
         </Preference>
+		<Preference
+            android:title="@string/dev_13"
+            android:summary="@string/dev13_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
     </PreferenceCategory>
     <PreferenceCategory
 	    android:title="@string/devices">
          <Preference
-             android:key="xtended_devices"
+             android:key="droidx_devices"
 	     android:title="@string/devices_title"
              android:summary="@string/devices_summary"
              android:fragment="com.android.settings.droidx.DroidXDevices"/>
