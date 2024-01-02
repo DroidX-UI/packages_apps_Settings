@@ -126,7 +126,7 @@
         android:key="top_level_apps"
         android:order="-105"
         android:summary="@string/app_and_notification_dashboard_summary"
-        android:title="@string/app_and_notification_dashboard_title"
+        android:title="@string/apps_dashboard_title"
         android:icon="@drawable/ic_apps"
         settings:layout="@layout/dot_dashboard_preference_bottom"
         android:fragment="com.android.settings.applications.AppDashboardFragment"/>
