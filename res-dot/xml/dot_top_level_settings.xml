@@ -148,8 +148,17 @@
         android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"/>
 
     <Preference
-        android:key="top_level_security"
+        android:key="top_level_safety_center"
         android:order="-98"
+        android:summary="@string/safety_center_summary"
+        android:title="@string/safety_center_title"
+        android:icon="@drawable/ic_settings_safety_center"
+        settings:layout="@layout/dot_dashboard_preference_middle"
+        settings:controller="com.android.settings.safetycenter.TopLevelSafetyCenterEntryPreferenceController"/>
+
+    <Preference
+        android:key="top_level_security"
+        android:order="-97"
         android:summary="@string/security_dashboard_summary"
         android:title="@string/security_settings_title"
         android:icon="@drawable/ic_settings_security_white"
@@ -159,7 +168,7 @@
 
     <Preference
         android:key="top_level_location"
-        android:order="-97"
+        android:order="-96"
         android:summary="@string/location_settings_loading_app_permission_stats"
         android:title="@string/location_settings_title"
         android:icon="@drawable/ic_settings_location"
@@ -169,7 +178,7 @@
 
     <Preference
         android:key="top_level_accounts"
-        android:order="-96"
+        android:order="-95"
         android:summary="@string/summary_placeholder"
         android:title="@string/account_dashboard_title"
         android:icon="@drawable/ic_settings_accounts"
