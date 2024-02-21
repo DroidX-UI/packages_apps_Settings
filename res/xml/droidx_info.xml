@@ -24,14 +24,14 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	<Preference
                android:title="@string/droidx_web"
                android:summary="@string/droidx_web_summary" 
-               android:icon="@drawable/ic_devs_info" >
+               android:icon="@drawable/ic_devs_website" >
          <intent android:action="android.intent.action.VIEW"
                 android:data="https://droidx-ui.github.io/" />
         </Preference>
         <Preference
                android:title="@string/droidx_telegram"
                android:summary="@string/droidx_telegram_summary" 
-	       android:icon="@drawable/ic_devs_info">
+	       android:icon="@drawable/ic_devs_tg">
         </Preference>
     <PreferenceCategory
             android:key="droidx_credits"
@@ -95,7 +95,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:summary="@string/dev10_description"
             android:icon="@drawable/ic_devs_pc" >
         </Preference>
-	<Preference
+        <Preference
             android:title="@string/dev_11"
             android:summary="@string/dev11_description"
             android:icon="@drawable/ic_devs_pc" >
@@ -105,9 +105,14 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:summary="@string/dev12_description"
             android:icon="@drawable/ic_devs_pc" >
         </Preference>
-		<Preference
+        <Preference
             android:title="@string/dev_13"
             android:summary="@string/dev13_description"
+            android:icon="@drawable/ic_devs_pc" >
+        </Preference>
+        <Preference
+            android:title="@string/dev_14"
+            android:summary="@string/dev14_description"
             android:icon="@drawable/ic_devs_pc" >
         </Preference>
     </PreferenceCategory>
