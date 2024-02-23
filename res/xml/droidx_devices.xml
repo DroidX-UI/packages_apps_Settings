@@ -223,5 +223,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:summary="@string/device40_description"
             android:icon="@drawable/ic_devs_phone" >
        </Preference>
+       <Preference
+            android:title="@string/device_41"
+            android:summary="@string/device41_description"
+            android:icon="@drawable/ic_devs_phone" >
+       </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
