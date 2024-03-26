@@ -29,7 +29,7 @@ import androidx.preference.Preference
 import androidx.preference.forEach
 
 import com.android.internal.logging.nano.MetricsProto
-import com.android.internal.util.crdroid.Utils
+import com.android.internal.util.droidx.DroidXUtils
 
 import com.android.settings.R
 import com.android.settings.core.SubSettingLauncher
@@ -53,9 +53,9 @@ class AppLockPackageListFragment : DashboardFragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        appLockManager = context.getSystemService(AppLockManager::class.java)
+        appLockManager = context.getSystemService(AppLockManager::class.java)!!
         pm = context.packageManager
-        launchablePackages = Utils.launchablePackages(context)
+        launchablePackages = DroidXUtils.launchablePackages(context)
         whiteListedPackages = resources.getStringArray(
             com.android.internal.R.array.config_appLockAllowedSystemApps)
     }
@@ -67,10 +67,10 @@ class AppLockPackageListFragment : DashboardFragment() {
             val preferences = withContext(Dispatchers.Default) {
                 pm.getInstalledPackages(
                     PackageInfoFlags.of(PackageManager.MATCH_ALL.toLong())
-                ).filter {
-                    !it.applicationInfo.isSystemApp() ||
-                        launchablePackages.contains(it.packageName) ||
-                        whiteListedPackages.contains(it.packageName)
+                ).filter { packageInfo ->
+                    val isSystemApp = packageInfo.applicationInfo?.isSystemApp ?: false
+                    !isSystemApp || launchablePackages.contains(packageInfo.packageName) ||
+                        whiteListedPackages.contains(packageInfo.packageName)
                 }.sortedWith { first, second ->
                     getLabel(first).compareTo(getLabel(second))
                 }
@@ -108,14 +108,14 @@ class AppLockPackageListFragment : DashboardFragment() {
     }
 
     private fun getLabel(packageInfo: PackageInfo) =
-        packageInfo.applicationInfo.loadLabel(pm).toString()
+        packageInfo.applicationInfo?.loadLabel(pm).toString()
 
     private fun createPreference(packageInfo: PackageInfo, isProtected: Boolean): Preference {
         val label = getLabel(packageInfo)
         return PrimarySwitchPreference(requireContext()).apply {
             key = packageInfo.packageName
             title = label
-            icon = packageInfo.applicationInfo.loadIcon(pm)
+            icon = packageInfo.applicationInfo?.loadIcon(pm)
             setIconSize(ICON_SIZE_MEDIUM)
             isChecked = isProtected
             setOnPreferenceChangeListener { _, newValue ->
@@ -140,7 +140,7 @@ class AppLockPackageListFragment : DashboardFragment() {
         }
     }
 
-    override fun getMetricsCategory(): Int = MetricsProto.MetricsEvent.CRDROID_SETTINGS
+        override fun getMetricsCategory(): Int = MetricsProto.MetricsEvent.CUSTOMIZE
 
     override protected fun getPreferenceScreenResId() = R.xml.app_lock_package_list_settings
 
