@@ -215,4 +215,10 @@
     <!-- Black theme -->
      <string name="system_black_theme_title">Use black theme</string>
      <string name="system_black_theme_summary">Force black background colors</string>
+
+     <!-- props -->
+     <string name="official_title">OFFICIAL</string>
+     <string name="unofficial_title">UNOFFICIAL</string>
+     <string name="maintainer_summary">%s</string>
+     <string name="unknown_maintainer">No Clue Who Made this Build ;)</string>
 </resources>

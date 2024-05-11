@@ -14,76 +14,56 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="15.6dp"
     android:layout_marginEnd="15.6dp"
-    android:foregroundGravity="center_horizontal"
-    android:background="@drawable/no_ripple">
-    
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="147dp"
-        android:clipToOutline="true"
-        android:cropToPadding="true"
-        android:scaleType="centerCrop"
-        android:background="@drawable/aboutradius"
-        android:src="@drawable/bannerlatest" />
-    
+    android:background="@drawable/frame_1445"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:gravity="left">
+
     <LinearLayout
-        android:weightSum="2"
-        android:gravity="center"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:paddingLeft="20dp"
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textSize="20sp"
+            style="@style/dotTextPrimaryMediumNew"/>
 
-            <TextView
-                 android:id="@android:id/title"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:ellipsize="marquee"
-                 android:singleLine="true"
-                 android:textColor="#FFFFFF"
-                 android:textSize="13sp"/>
+    </LinearLayout>
 
-            <TextView
-                 android:id="@android:id/summary"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_below="@android:id/title"
-                 android:layout_alignStart="@android:id/title"
-                 android:layout_marginTop="4dp"
-                 android:singleLine="true"
-                 android:textColor="#FFFFFF"
-                 android:textSize="18sp"/>
-                 
-        </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="bottom">
+        
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingRight="10dp"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottieanime"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
-                app:lottie_rawRes="@raw/dxblinklottie"
-                app:lottie_loop="true"
-                app:lottie_autoPlay="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rocket"
+                android:tint="?android:attr/colorAccent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5.56dp"
+                android:text="Earth"
+                android:textSize="12sp"
+                style="@style/dotTextPrimaryMedium"/>
+
         </LinearLayout>
     </LinearLayout>
-</FrameLayout>  
+</LinearLayout>
