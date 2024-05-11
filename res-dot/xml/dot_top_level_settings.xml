@@ -21,32 +21,13 @@
     android:key="top_level_settings">
 
     <Preference
-        android:key="top_level_about_device"
+        android:key="top_device_banner"
         android:order="-205"
         android:title="@string/dot_dashboard_device"
         android:summary="@string/summary_placeholder"
-        android:icon="@drawable/ic_settings_about_device"
         settings:layout="@layout/dot_dashboard_preference_phone"
-        android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
-
-        
-    <Preference
-        android:key="top_level_droidx"
-        android:title="@string/customize_dashboard_title"
-        android:summary="@string/build_tweaks_summary_title"
-        android:icon="@drawable/ic_settings_droidx"
-        android:order="-204"
-        android:fragment="com.droidx.customize.CustomizeDashboard"
-        settings:layout="@layout/dot_dashboard_preference_bottom"
-        settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
-
-    <PreferenceCategory
-        android:order="-200"
-        android:selectable="false"
-        android:title="@string/top_level_connectivity"
-        settings:shouldDisableView="false"
-        settings:enabled="false" />
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
 
     <Preference
         android:key="top_level_network"
@@ -68,22 +49,25 @@
         settings:layout="@layout/dot_dashboard_preference_bottom"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController" />
 
-    <PreferenceCategory
-        android:order="-170"
-        android:selectable="false"
-        android:title="@string/top_level_personalize"
-        settings:shouldDisableView="false"
-        settings:enabled="false" />
-
     <Preference
         android:key="top_level_display"
-        android:order="-110"
+        android:order="-111"
         android:summary="@string/display_dashboard_summary"
         android:title="@string/display_settings"
         android:icon="@drawable/ic_settings_display_white"
         android:fragment="com.android.settings.DisplaySettings"
         settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"
         settings:layout="@layout/dot_dashboard_preference_top"/>
+
+    <Preference
+        android:key="top_level_droidx"
+        android:title="@string/customize_dashboard_title"
+        android:summary="@string/build_tweaks_summary_title"
+        android:icon="@drawable/ic_settings_droidx"
+        android:order="-110"
+        android:fragment="com.droidx.customize.CustomizeDashboard"
+        settings:layout="@layout/dot_dashboard_preference_middle"
+        settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
 
     <com.android.settings.widget.RestrictedHomepagePreference
         android:icon="@drawable/ic_settings_wallpaper_white"
@@ -130,13 +114,6 @@
         android:icon="@drawable/ic_apps"
         settings:layout="@layout/dot_dashboard_preference_bottom"
         android:fragment="com.android.settings.applications.AppDashboardFragment"/>
-
-    <PreferenceCategory
-        android:order="-100"
-        android:selectable="false"
-        android:title="@string/top_level_security"
-        settings:shouldDisableView="false"
-        settings:enabled="false" />
 
     <Preference
         android:key="top_level_privacy"
@@ -186,13 +163,6 @@
         settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController" 
         android:fragment="com.android.settings.accounts.AccountDashboardFragment"/>
 
-    <PreferenceCategory
-        android:order="-90"
-        android:selectable="false"
-        android:title="@string/top_level_others"
-        settings:shouldDisableView="false"
-        settings:enabled="false" />
-    
     <Preference
         android:key="top_level_accessibility"
         android:order="-20"

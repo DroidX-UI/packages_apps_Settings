@@ -23,17 +23,36 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
-        android:order="0"
+        android:order="-999"
         android:layout="@layout/settings_entity_header"
         android:selectable="false"
         settings:isPreferenceVisible="false"/>
-
+    
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="Updater_info"
+        android:order="-998"
+        android:layout="@layout/softwareinfo_frame"
+        settings:enableCopying="true"
+        settings:isPreferenceVisible="true"
+        android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"/>
+    
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="device_hw_info"
+        android:order="-997"
+        android:layout="@layout/hardwareinfo"
+        android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
+        settings:enableCopying="true"
+        android:selectable="false"
+        settings:isPreferenceVisible="true"
+        settings:keywords="@string/keywords_model_and_hardware"/>
+        
 	<!-- About Devs -->
-    <Preference
+    <com.android.settingslib.widget.LayoutPreference
          android:key="dev_info"
-         android:order="-1"
-         android:title="@string/droidx_about_info"
-         android:summary="@string/droidx_about_info_summary_title"
+         android:order="-996"
+         android:layout="@layout/aboutdxlayout"
+         android:selectable="true"
+         settings:isPreferenceVisible="true"
          android:fragment="com.android.settings.droidx.DroidXDevsInfo" />
 		 
     <PreferenceCategory
@@ -110,17 +129,6 @@
             android:summary="@string/summary_placeholder"
             settings:isPreferenceVisible="@bool/config_show_sim_info"
             settings:controller="com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController"/>
-
-        <!-- Model & hardware -->
-        <Preference
-            android:key="device_model"
-            android:order="30"
-            android:title="@string/model_info"
-            android:summary="@string/summary_placeholder"
-            android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
-            settings:enableCopying="true"
-            settings:keywords="@string/keywords_model_and_hardware"
-            settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
 
         <!-- EID -->
         <com.android.settingslib.CustomDialogPreferenceCompat
