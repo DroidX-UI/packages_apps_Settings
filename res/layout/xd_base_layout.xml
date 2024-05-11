@@ -50,7 +50,7 @@
           app:scrimVisibleHeightTrigger="@dimen/settingslib_scrim_visible_height_trigger"
           app:statusBarScrim="@null"
           app:titleCollapseMode="fade"
-          app:expandedTitleGravity="center"
+          app:expandedTitleGravity="left"
           app:expandedTitleMarginTop="60dp"
           app:toolbarId="@id/action_bar">
             

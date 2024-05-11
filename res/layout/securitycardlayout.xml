@@ -14,18 +14,18 @@
         android:weightSum="2">
 
         <LinearLayout
-            android:id="@+id/frame123"
+            android:id="@+id/security"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/frame_1443"
+            android:background="@drawable/frame_645"
             android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
-                android:layout_width="45dp"
+                android:id="@android:id/title"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:text="DXUI"
                 android:textSize="12sp"
                 style="@style/dotTextPrimaryMediumNew" />
 
@@ -40,20 +40,20 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/frame345"
+            android:id="@+id/dxid"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:layout_weight="1"
-            android:background="@drawable/frame_1444"
+            android:background="@drawable/frame_646"
             android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
-                android:id="@android:id/title"
-                android:layout_width="55dp"
+                android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
+                android:text="DX-ID"
                 style="@style/dotTextPrimaryMediumNew" />
 
             <TextView
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="bottom"
-                android:text="14"
+                android:text="######"
                 android:textSize="17sp"
                 style="@style/dotTextPrimaryMedium" />
 
