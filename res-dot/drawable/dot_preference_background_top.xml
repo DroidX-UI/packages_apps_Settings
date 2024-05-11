@@ -21,9 +21,7 @@
             <solid android:color="#FFFFFFFF" />
             <corners
                 android:topRightRadius="@dimen/dot_radius"
-                android:topLeftRadius="@dimen/dot_radius"
-                android:bottomRightRadius="@dimen/dot_radius_merge"
-                android:bottomLeftRadius="@dimen/dot_radius_merge" />
+                android:topLeftRadius="@dimen/dot_radius" />
         </shape>
     </item>
     <item android:id="@android:id/background">

@@ -53,7 +53,7 @@ public class FirmwareVersionSettings extends DashboardFragment {
         pref = screen.getPreference(1);
         pref.setLayoutResource(R.layout.androidDxuiVlayout);
         pref = screen.getPreference(2);
-        pref.setLayoutResource(R.layout.deviceinfoLayout);
+        pref.setLayoutResource(R.layout.securitycardlayout);
         for (int i = 3; i < screen.getPreferenceCount(); i++) {
             pref = screen.getPreference(i);
             boolean isValid = pref.isEnabled() && pref.isVisible() && pref.getTitle() != null;
