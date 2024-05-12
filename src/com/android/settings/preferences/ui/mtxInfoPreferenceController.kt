@@ -33,6 +33,8 @@ import com.android.settingslib.core.AbstractPreferenceController
 import com.android.settingslib.DeviceInfoUtils
 import com.android.settingslib.widget.LayoutPreference
 
+import com.android.settings.preferences.ui.DeviceInfoUtil
+
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 
@@ -53,18 +55,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
         return if (propValue.isNotEmpty()) propValue else SystemProperties.get(customFallback, "Unknown")
     }
     
-    private fun getDroidxRamStorage(): String {
-        return SystemProperties.get(PROP_DROIDX_RAM, "0gb") + "/" + SystemProperties.get(PROP_DROIDX_STORAGE, "0gb" + " GB")
-    }
-    
-    private fun getDroidxStorage(): String {
-        return getProp(PROP_DROIDX_STORAGE)
-    }
-    
-    private fun getDroidxRam(): String {
-        return getProp(PROP_DROIDX_RAM)
-    }
-
     private fun getDroidxChipset(): String {
         return getProp(PROP_DROIDX_CHIPSET)
     }
@@ -76,20 +66,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
     private fun getDroidxResolution(): String {
         return getProp(PROP_DROIDX_DISPLAY)
     }
-    
-    private fun getDroidxBrand(): String {
-        return getProp(PROP_DROIDX_BRAND)
-        //return mContext.getString(R.string.device_brand, PROP_DROIDX_BRAND)
-    }
-    
-    private fun getDroidxModel(): String {
-        return getProp(PROP_DROIDX_MODEL)
-        //return mContext.getString(R.string.device_model, PROP_DROIDX_MODEL)
-    }
-    
-    /*private fun getBuildImage(releaseType: String): String {
-        return mContext.getString(if (releaseType == "official") R.string.checkmarkImage else R.string.crossmarkImage)
-    }*/
     
     private fun getDroidxReleaseType(): String {
         val releaseType = getPropertyOrDefault(PROP_DROIDX_RELEASETYPE)
@@ -118,13 +94,12 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
 
         val hwInfoPreference = screen.findPreference<LayoutPreference>(KEY_HW_INFO)!!
         val swInfoPreference = screen.findPreference<LayoutPreference>(KEY_SW_INFO)!!
-        //val rsInfoPreference = screen.findPreference<LayoutPreference>(KEY_RS_INFO)!!
 
         hwInfoPreference.apply {
             findViewById<TextView>(R.id.device_chipset).text = getDroidxChipset()
-            findViewById<TextView>(R.id.device_storage).text = getDroidxStorage()
-            findViewById<TextView>(R.id.device_ram).text = getDroidxRam()
-            findViewById<TextView>(R.id.device_battery_capacity).text = getDroidxBattery()
+            findViewById<TextView>(R.id.device_storage).text = "${DeviceInfoUtil.getStorageTotal(mContext)}"
+            findViewById<TextView>(R.id.device_ram).text = "${DeviceInfoUtil.getTotalRam()}"
+            findViewById<TextView>(R.id.device_battery_capacity).text = DeviceInfoUtil.getBatteryCapacity(mContext)
             findViewById<TextView>(R.id.device_resolution).text = getDroidxResolution()
         }
         
@@ -133,13 +108,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
             val myImageView = findViewById<ImageView>(R.id.build_status_image)
             if (releaseType == "official") myImageView.setImageResource(R.drawable.checkmark) else myImageView.setImageResource(R.drawable.crossmark)
         }
-        
-        //rsInfoPreference.apply {
-          //  findViewById<TextView>(R.id.device_ram_storage).text = getDroidxRamStorage()
-            //findViewById<TextView>(R.id.device_brand).text = getDroidxBrand()
-            //findViewById<TextView>(R.id.device_model).text = getDroidxModel()
-        //}
-
     }
 
     override fun isAvailable(): Boolean {
@@ -167,12 +135,8 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
         private const val PROP_DROIDX_MAINTAINER = "ro.droidx.maintainer"
 
         private const val PROP_DROIDX_CHIPSET = "ro.droidx.chipset"
-        private const val PROP_DROIDX_STORAGE = "ro.droidx.storage"
-        private const val PROP_DROIDX_RAM = "ro.droidx.ram"
         private const val PROP_DROIDX_BATTERY = "ro.droidx.battery"
         private const val PROP_DROIDX_DISPLAY = "ro.droidx.display_resolution"
         
-        private const val PROP_DROIDX_BRAND = "ro.product.brand"
-        private const val PROP_DROIDX_MODEL = "ro.product.model"
     }
 }
