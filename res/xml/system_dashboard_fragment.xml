@@ -79,6 +79,14 @@
         android:fragment="com.android.settings.datetime.DateTimeSettings"
         settings:controller="com.android.settings.datetime.DateTimePreferenceController"/>
 
+     <!-- Misc Privacy and Security Settings -->
+     <Preference
+         android:key="misc_security_privacy_settings"
+         android:title="@string/misc_security_privacy_title"
+         android:icon="@drawable/ic_settings_privacy_filled"
+         android:order="-200"
+         android:fragment="com.android.settings.custom.security.MiscSecurityPrivacySettings"/>
+
     <!-- System updates -->
     <Preference
         android:key="additional_system_update_settings"

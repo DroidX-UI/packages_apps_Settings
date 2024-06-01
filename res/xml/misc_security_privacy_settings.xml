@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 TheParasiteProject
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/misc_security_privacy_title">
+
+    <PreferenceCategory
+        android:key="misc_security_category"
+        android:title="@string/misc_security_header">
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="misc_privacy_category"
+        android:title="@string/misc_privacy_header">
+    </PreferenceCategory>
+
+</PreferenceScreen>
