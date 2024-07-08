@@ -58,6 +58,7 @@ android_library {
         "Customize/src/**/*.java",
         "Customize/src/**/*.kt",
         "src-dot/**/*.java",
+        "src/**/*.aidl",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
