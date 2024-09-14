@@ -214,10 +214,13 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (!isTaskRoot() && !isSingleTask()) {
-            Log.i(TAG, "Not task root nor single task, finish");
+        // Ensure device is provisioned in order to access Settings home
+        // TODO(b/331254029): This should later be replaced in favor of an allowlist
+        boolean unprovisioned = android.provider.Settings.Global.getInt(getContentResolver(),
+                android.provider.Settings.Global.DEVICE_PROVISIONED, 0) == 0;
+        if (unprovisioned) {
+            Log.e(TAG, "Device is not provisioned, exiting Settings");
             finish();
-            return;
         }
 
         mIsEmbeddingActivityEnabled = ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this);
