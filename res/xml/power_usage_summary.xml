@@ -64,6 +64,13 @@
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController"
         settings:keywords="@string/keywords_battery_adaptive_preferences" />
 
+    <Preference
+        android:fragment="com.android.settings.deviceinfo.batteryinfo.BatteryInfoFragment"
+        android:key="battery_info"
+        android:title="@string/battery_info"
+        settings:controller="com.android.settings.deviceinfo.batteryinfo.BatteryInfoPreferenceController"
+        settings:keywords="@string/keywords_battery_info" />
+
     <SwitchPreferenceCompat
         android:key="status_bar_show_battery_percent"
         android:title="@string/battery_percentage"
