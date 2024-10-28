@@ -61,7 +61,7 @@ public class WifiTetherHiddenSsidPreferenceController extends
         if (mPreference == null) {
             return;
         }
-        ((SwitchPreference) mPreference).setChecked(mHiddenSsid);
+        ((SwitchPreferenceCompat) mPreference).setChecked(mHiddenSsid);
     }
 
     @Override
