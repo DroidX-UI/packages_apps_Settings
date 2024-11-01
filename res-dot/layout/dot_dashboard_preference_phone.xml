@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5.56dp"
-                android:text="Mars"
+                android:text="Europa"
                 android:textSize="12sp"
                 style="@style/dotTextPrimaryMedium"/>
 
