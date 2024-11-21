@@ -19,4 +19,7 @@
      <!-- xdUI Base Layout -->
      <color name="homepage_blaze_background">#536dfe</color>
      <color name="xd_background1">@android:color/system_neutral1_50</color>
+
+     <!-- Show Now Playing -->
+    <bool name="config_show_now_playing">false</bool>
 </resources>
