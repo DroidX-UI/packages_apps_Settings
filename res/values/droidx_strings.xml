@@ -449,4 +449,8 @@
     <!-- Heads-up -->
     <string name="compact_heads_up_notifications_enabled_title">Compact heads-up</string>
     <string name="compact_heads_up_notifications_enabled_summary">Display notifications in compact size</string>
+
+    <!-- Minimum auto brightness --> 
+    <string name="user_min_auto_brightness_title">Minimal auto brightness</string>
+    <string name="user_min_auto_brightness_summary">Caps auto brightness minimum value</string>
 </resources>
