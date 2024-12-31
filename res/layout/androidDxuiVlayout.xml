@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="bottom"
-                android:text="14"
+                android:text="15"
                 android:textSize="17sp"
                 style="@style/dotTextPrimaryMedium" />
 

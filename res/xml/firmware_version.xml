@@ -56,7 +56,7 @@
     <Preference
         android:key="module_version"
         android:title="@string/module_version"
-        android:summary="14"
+        android:summary="15"
         settings:enableCopying="true"/>
 
     <!-- Baseband -->
