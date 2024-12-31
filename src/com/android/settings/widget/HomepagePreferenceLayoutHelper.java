@@ -22,7 +22,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.settings.R;
-import com.android.settings.flags.Flags;
 
 /** Helper for homepage preference to manage layout. */
 public class HomepagePreferenceLayoutHelper {
@@ -40,10 +39,7 @@ public class HomepagePreferenceLayoutHelper {
     }
 
     public HomepagePreferenceLayoutHelper(Preference preference) {
-        preference.setLayoutResource(
-                Flags.homepageRevamp()
-                        ? R.layout.homepage_preference_v2
-                        : R.layout.homepage_preference);
+        preference.setLayoutResource(R.layout.homepage_preference);
     }
 
     /** Sets whether the icon should be visible */

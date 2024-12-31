@@ -33,9 +33,7 @@ import android.view.ViewGroup;
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
-import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.window.embedding.ActivityEmbeddingController;
@@ -44,10 +42,8 @@ import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
 import com.android.settings.activityembedding.ActivityEmbeddingUtils;
-import com.android.settings.core.RoundCornerPreferenceAdapter;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.dashboard.DashboardFragment;
-import com.android.settings.flags.Flags;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.support.SupportPreferenceController;
@@ -88,7 +84,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
     @Override
     protected int getPreferenceScreenResId() {
-        return Flags.homepageRevamp() ? R.xml.top_level_settings_v2 : R.xml.dot_top_level_settings;
+        return R.xml.dot_top_level_settings;
     }
 
     @Override
@@ -226,9 +222,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             }
         }
         
-        if (Flags.homepageRevamp()) {
-            return;
-        }
         int tintColor = Utils.getHomepageIconColor(getContext());
         iteratePreferences(preference -> {
             Drawable icon = preference.getIcon();
@@ -354,14 +347,10 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
     @Override
     protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
-        if (mIsEmbeddingActivityEnabled && (getActivity() instanceof SettingsHomepageActivity)) {
-            return mHighlightMixin.onCreateAdapter(this, preferenceScreen, mScrollNeeded);
+        if (!mIsEmbeddingActivityEnabled || !(getActivity() instanceof SettingsHomepageActivity)) {
+            return super.onCreateAdapter(preferenceScreen);
         }
-
-        if (Flags.homepageRevamp()) {
-            return new RoundCornerPreferenceAdapter(preferenceScreen);
-        }
-        return super.onCreateAdapter(preferenceScreen);
+        return mHighlightMixin.onCreateAdapter(this, preferenceScreen, mScrollNeeded);
     }
 
     @Override
@@ -385,17 +374,13 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         }
 
         job.init();
-        iteratePreferences(screen, job);
-    }
-
-    private void iteratePreferences(PreferenceGroup group, PreferenceJob job) {
-        int count = group.getPreferenceCount();
+        int count = screen.getPreferenceCount();
         for (int i = 0; i < count; i++) {
-            Preference preference = group.getPreference(i);
-            job.doForEach(preference);
-            if (preference instanceof PreferenceCategory) {
-                iteratePreferences((PreferenceCategory) preference, job);
+            Preference preference = screen.getPreference(i);
+            if (preference == null) {
+                break;
             }
+            job.doForEach(preference);
         }
     }
 
@@ -407,10 +392,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(
-                    Flags.homepageRevamp()
-                            ? R.xml.top_level_settings_v2
-                            : R.xml.dot_top_level_settings) {
+            new BaseSearchIndexProvider(R.xml.dot_top_level_settings) {
 
                 @Override
                 protected boolean isPageSearchEnabled(Context context) {
