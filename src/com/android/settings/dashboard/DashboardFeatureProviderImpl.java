@@ -470,9 +470,7 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
                 iconDrawable.mutate();
             }
             iconDrawable.setTint(Utils.getHomepageIconColor(preference.getContext()));
-        }
-
-        if (forceRoundedIcon && !TextUtils.equals(mContext.getPackageName(), iconPackage)) {
+        } else if (forceRoundedIcon && !TextUtils.equals(mContext.getPackageName(), iconPackage)) {
             iconDrawable = new AdaptiveIcon(mContext, iconDrawable,
                     R.dimen.dashboard_tile_foreground_image_inset);
             ((AdaptiveIcon) iconDrawable).setBackgroundColor(mContext, tile);
