@@ -648,6 +648,10 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                 observers = mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(
                         getActivity(), this, forceRoundedIcons, pref, tile, key,
                         mPlaceholderPreferenceController.getOrder());
+                // Order the prefs within their respective category
+                if (KEY_ORDER.containsKey(key)) {
+                    pref.setOrder(KEY_ORDER.get(key));
+                }
                 if (Flags.dynamicInjectionCategory()) {
                     if (tile.hasGroupKey()) {
                         Preference group = screen.findPreference(tile.getGroupKey());
