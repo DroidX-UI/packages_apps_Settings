@@ -121,6 +121,15 @@
             android:summary="@string/wallpaper_dashboard_summary"
             settings:highlightableMenuKey="@string/menu_key_wallpaper"
             settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
+
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.droidx.customize.CustomizeDashboard"
+            android:icon="@drawable/ic_settings_droidx"
+            android:key="top_level_droidx"
+            android:order="-5"
+            android:title="@string/customize_dashboard_title"
+            android:summary="@string/build_tweaks_summary_title"
+            settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
     </PreferenceCategory>
 
     <PreferenceCategory
