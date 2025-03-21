@@ -61,20 +61,20 @@
 
     <Preference
         android:key="top_level_droidx"
+        android:order="-110"
         android:title="@string/customize_dashboard_title"
         android:summary="@string/build_tweaks_summary_title"
         android:icon="@drawable/ic_settings_droidx"
-        android:order="-110"
         android:fragment="com.droidx.customize.CustomizeDashboard"
-        settings:layout="@layout/dot_dashboard_preference_middle"
-        settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
+        settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController"
+        settings:layout="@layout/dot_dashboard_preference_middle" />
 
     <com.android.settings.widget.RestrictedHomepagePreference
-        android:icon="@drawable/ic_settings_wallpaper_white"
         android:key="top_level_wallpaper"
         android:order="-109"
         android:title="@string/wallpaper_settings_title"
         android:summary="@string/wallpaper_dashboard_summary"
+        android:icon="@drawable/ic_settings_wallpaper_white"
         settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"
         settings:layout="@layout/dot_dashboard_preference_middle"/>
 
@@ -106,9 +106,20 @@
         settings:layout="@layout/dot_dashboard_preference_middle"
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"/>
 
+  <com.android.settings.widget.RestrictedHomepagePreference
+        android:key="top_level_priority_modes"
+        android:order="-105"
+        android:title="@string/zen_modes_list_title"
+        android:icon="@*android:drawable/ic_zen_priority_modes"
+        settings:controller="com.android.settings.notification.modes.ZenModesLinkPreferenceController"
+        settings:layout="@layout/dot_dashboard_preference_middle"
+        settings:useAdminDisabledSummary="true"
+        settings:highlightableMenuKey="@string/menu_key_priority_modes"
+        android:fragment="com.android.settings.notification.modes.ZenModesListFragment" />
+
     <Preference
         android:key="top_level_apps"
-        android:order="-105"
+        android:order="-104"
         android:summary="@string/app_and_notification_dashboard_summary"
         android:title="@string/apps_dashboard_title"
         android:icon="@drawable/ic_apps"
@@ -154,8 +165,19 @@
         android:fragment="com.android.settings.location.LocationSettings"/>
 
     <Preference
-        android:key="top_level_accounts"
+        android:key="top_level_emergency"
+        android:title="@string/emergency_settings_preference_title"
+        android:summary="@string/emergency_dashboard_summary"
+        android:icon="@drawable/ic_settings_emergency"
         android:order="-95"
+        android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"
+        settings:layout="@layout/dot_dashboard_preference_middle"
+        settings:isPreferenceVisible="@bool/config_show_emergency_settings"
+        settings:highlightableMenuKey="@string/menu_key_emergency"/>
+
+    <Preference
+        android:key="top_level_accounts"
+        android:order="-94"
         android:summary="@string/summary_placeholder"
         android:title="@string/account_dashboard_title"
         android:icon="@drawable/ic_settings_accounts"
