@@ -21,9 +21,24 @@
     android:key="top_level_settings">
 
     <PreferenceCategory
-        android:order="-140"
+        android:order="-150"
         android:key="top_level_account_category"
         android:layout="@layout/settingslib_preference_category_no_title">
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:order="-140"
+        android:key="top_level_droidx_category"
+        android:layout="@layout/settingslib_preference_category_no_title">
+
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.droidx.customize.CustomizeDashboard"
+            android:icon="@drawable/ic_settings_droidx"
+            android:key="top_level_droidx"
+            android:order="-160"
+            android:title="@string/customize_dashboard_title"
+            android:summary="@string/build_tweaks_summary_title"
+            settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -121,15 +136,6 @@
             android:summary="@string/wallpaper_dashboard_summary"
             settings:highlightableMenuKey="@string/menu_key_wallpaper"
             settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
-
-        <com.android.settings.widget.HomepagePreference
-            android:fragment="com.droidx.customize.CustomizeDashboard"
-            android:icon="@drawable/ic_settings_droidx"
-            android:key="top_level_droidx"
-            android:order="-5"
-            android:title="@string/customize_dashboard_title"
-            android:summary="@string/build_tweaks_summary_title"
-            settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
     </PreferenceCategory>
 
     <PreferenceCategory
