@@ -56,6 +56,7 @@ android_library {
         "src/**/*.java",
         "src/**/*.kt",
         "Customize/src/**/*.java",
+        "Customize/src/**/*.kt",
         "src-dot/**/*.java",
     ],
     exclude_srcs: [
@@ -128,6 +129,8 @@ android_library {
         "androidx.navigation_navigation-runtime-ktx",
         "androidx.navigation_navigation-ui-ktx",
         "kotlin-stdlib",
+        "kotlinx_coroutines_android",
+        "kotlinx_coroutines",
         "VendorSupport-preference",
         "glide",
     ],
