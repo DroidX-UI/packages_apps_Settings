@@ -168,6 +168,12 @@
             settings:keywords="@string/keywords_screen_resolution"
             settings:controller="com.android.settings.display.ScreenResolutionController"/>
 
+        <SwitchPreferenceCompat
+            android:key="hdr_display"
+            android:title="@string/hdr_display_title"
+            android:summary="@string/hdr_display_summary"
+            settings:controller="com.android.settings.display.HdrDisplayPreferenceController"/>
+
         <Preference
             android:key="refresh_rate"
             android:title="@string/refresh_rate_title"

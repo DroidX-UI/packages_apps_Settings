@@ -570,4 +570,8 @@
     <string name="ongoing_action_chip_title">Enable Ongoing ProgressBar Chip</string>
     <string name="ongoing_action_chip_summary">Show progressbar chip in statusbar which features ongoing action progress from a notification</string>
 
+    <!-- HDR Display -->
+    <string name="hdr_display_title">HDR Display</string>
+    <string name="hdr_display_summary">Enable peak brightness for HDR content. This will increase battery usage</string>
+
 </resources>
