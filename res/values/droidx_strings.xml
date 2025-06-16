@@ -574,8 +574,4 @@
     <string name="hdr_display_title">HDR Display</string>
     <string name="hdr_display_summary">Enable peak brightness for HDR content. This will increase battery usage</string>
 
-    <!-- Keybox Data -->
-    <string name="keybox_data_title">Keybox Spoofing</string>
-    <string name="keybox_data_summary">Choose a keybox XML file to spoof key attestation system-wide. Tap the delete icon to clear the current keybox data.</string>
-
 </resources>
