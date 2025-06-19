@@ -15,7 +15,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/frame_1446"
             android:orientation="vertical"
             android:padding="18dp"
             android:gravity="left">

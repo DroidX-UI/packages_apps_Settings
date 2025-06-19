@@ -39,6 +39,16 @@
             android:title="@string/customize_dashboard_title"
             android:summary="@string/build_tweaks_summary_title"
             settings:controller="com.droidx.customize.TopLevelExtensionsEntryPreferenceController" />
+
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+            android:icon="@drawable/ic_settings_about_device_filled"
+            android:key="top_level_about_device"
+            android:order="-150"
+            android:title="@string/about_settings"
+            android:summary="@string/summary_placeholder"
+            settings:highlightableMenuKey="@string/menu_key_about_device"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -170,16 +180,6 @@
             android:title="@string/header_category_system"
             android:summary="@string/system_dashboard_summary"
             settings:highlightableMenuKey="@string/menu_key_system"/>
-
-        <com.android.settings.widget.HomepagePreference
-            android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
-            android:icon="@drawable/ic_settings_about_device_filled"
-            android:key="top_level_about_device"
-            android:order="-10"
-            android:title="@string/about_settings"
-            android:summary="@string/summary_placeholder"
-            settings:highlightableMenuKey="@string/menu_key_about_device"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
     </PreferenceCategory>
 
     <PreferenceCategory
