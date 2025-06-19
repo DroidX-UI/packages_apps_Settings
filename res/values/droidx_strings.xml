@@ -578,4 +578,8 @@
     <string name="keybox_data_title">Keybox Spoofing</string>
     <string name="keybox_data_summary">Choose a keybox XML file to spoof key attestation system-wide. Tap the delete icon to clear the current keybox data.</string>
 
+    <!-- Game Space -->
+    <string name="game_space_title">Game Space</string>
+    <string name="game_space_summary">Enhance your gaming experience</string>
+
 </resources>
