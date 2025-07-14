@@ -21,6 +21,8 @@ import android.hardware.display.AmbientDisplayConfiguration;
 
 import androidx.annotation.NonNull;
 
+import com.droidx.settings.gestures.SwipeToScreenshotPreferenceController;
+
 import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
 
