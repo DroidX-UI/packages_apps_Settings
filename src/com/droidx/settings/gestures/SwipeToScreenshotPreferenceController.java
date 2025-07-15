@@ -1,24 +1,14 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2019 The Android Open Source Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.android.settings.gestures;
+package com.droidx.settings.gestures;
 
-import static android.provider.Settings.System.SWIPE_TO_SCREENSHOT;
+import static android.provider.Settings.System.THREE_FINGER_GESTURE;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.provider.Settings;
 import android.text.TextUtils;
 
@@ -52,12 +42,12 @@ public class SwipeToScreenshotPreferenceController extends GesturePreferenceCont
 
     @Override
     public boolean setChecked(boolean isChecked) {
-        return Settings.System.putInt(
-                mContext.getContentResolver(), SWIPE_TO_SCREENSHOT, isChecked ? ON : OFF);
+        return Settings.System.putInt(mContext.getContentResolver(), THREE_FINGER_GESTURE,
+                isChecked ? ON : OFF);
     }
 
     @Override
     public boolean isChecked() {
-        return Settings.System.getInt(mContext.getContentResolver(), SWIPE_TO_SCREENSHOT, 0) != 0;
+        return Settings.System.getInt(mContext.getContentResolver(), THREE_FINGER_GESTURE, 0) != 0;
     }
 }
